@@ -1,0 +1,15 @@
+.auth__container {
+  display: flex;
+  justify-content: center;
+}
+
+.auth__form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.auth__header {
+  text-align: center;
+  display: block;
+}

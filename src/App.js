@@ -7,6 +7,7 @@ import { NotFound } from "./pages/notFound/NotFound";
 import { Signup } from "./pages/auth/Signup";
 import { Login } from "./pages/auth/Login";
 import { Profile } from "./pages/profile/Profile";
+import { Register } from "./pages/auth/Register";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Route path='/login' element={<Login userLogin={userLogin} />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/profile' element={<Profile />} />
+      <Route path='/register' element={<Register />} />
     </Routes>
   );
 }

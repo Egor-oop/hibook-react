@@ -11,17 +11,13 @@ import { Register } from "./pages/auth/Register";
 
 function App() {
 
-  const userLogin = (token) => {
-    console.log(token);
-  }
-
   return (
     <Routes>
       <Route path='/' element={<div>Hello, World!</div>} />
       <Route path='*' element={<NotFound />} />
-      <Route path='/login' element={<Login userLogin={userLogin} />} />
-      <Route path='/signup' element={<Signup />} />
       <Route path='/profile' element={<Profile />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<Signup />} />
       <Route path='/register' element={<Register />} />
     </Routes>
   );

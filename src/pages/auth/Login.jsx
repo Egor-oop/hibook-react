@@ -2,7 +2,7 @@ import React from 'react';
 import './Auth.css';
 import { AuthInput } from '../../components/auth/AuthInput';
 import { InputButton } from '../../components/button/InputButton';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 export const Login = () => {
   const [username, setUsername] = React.useState('');
@@ -28,44 +28,37 @@ export const Login = () => {
     });
   }
 
-  // if (localStorage.getItem('userToken') !== null) {
-  //   console.log(localStorage.getItem('userToken'));
-  //   return (
-  //     <div>
-  //       You're already logged in
-  //       <InputButton
-  //       title='Log Out'
-  //       onClick={() => {}}
-  //       />
-  //     </div>
-  //   )
-  // }
-  return (
-    <div className='auth__container'>
-      <form className='auth__form'>
-        <h1 className='auth__header'>Log In</h1>
-        <div className='auth__form-inputs'>
-          <AuthInput
-            type='text'
-            label='Username'
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <AuthInput
-            type='password'
-            label='Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <InputButton
-            title='Log In'
-            onClick={() => login()}
-          />
-        </div>
-        <p>
-          Don't have an account? <Link to='/register'>Register</Link>
-        </p>
-      </form>
-    </div>
-  )
+  const isLoggedIn = !localStorage.getItem('userToken');
+  if (isLoggedIn) {
+    return (
+      <div className='auth__container'>
+        <form className='auth__form'>
+          <h1 className='auth__header'>Log In</h1>
+          <div className='auth__form-inputs'>
+            <AuthInput
+              type='text'
+              label='Username'
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <AuthInput
+              type='password'
+              label='Password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <InputButton
+              title='Log In'
+              onClick={() => login()}
+            />
+          </div>
+          <p>
+            Don't have an account? <Link to='/register'>Register</Link>
+          </p>
+        </form>
+      </div>
+    )
+  } else {
+    return <Navigate to='/profile' />
+  }
 }

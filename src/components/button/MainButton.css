@@ -13,6 +13,7 @@
 
 .main-button:hover {
     background-color: #6A5FE4;
+    cursor: pointer;
 }
 
 .main-button:active {

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.main-input {
+    background-color: transparent;
+    border: 3px solid #515160;
+    border-radius: 17px;
+    color: #515160;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 30px;
+}
+
+.main-input:hover {
+    border-color: #696975;
+    color: #696975;
+}
+
+.main-input:active {
+    border-color: #616080;
+    color: #616080;
+}
+
+.main-input:disabled {
+    border-color: #262626;
+    color: #262626;
+}
+
+.main-input::placeholder {
+    color: #313137;
+}

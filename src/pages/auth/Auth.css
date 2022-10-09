@@ -5,6 +5,14 @@
 }
 
 .auth__form-inputs {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.auth__form-data-inputs {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -14,4 +22,8 @@
   text-align: center;
   display: block;
   font-size: 40px;
+}
+
+.auth__question-text {
+  
 }

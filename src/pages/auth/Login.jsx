@@ -2,6 +2,7 @@ import React from 'react';
 import './Auth.css';
 import { AuthInput } from '../../components/auth/AuthInput';
 import { InputButton } from '../../components/button/InputButton';
+import { MainInput } from '../../components/input/MainInput';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 export const Login = () => {
@@ -35,7 +36,21 @@ export const Login = () => {
         <form className='auth__form'>
           <h1 className='auth__header'>Log In</h1>
           <div className='auth__form-inputs'>
-            <AuthInput
+            <MainInput
+              type='text'
+              placeholder='Username'
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              style={{width:'425px'}}
+            />
+            <MainInput
+              type='password'
+              placeholder='Password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              style={{width:'425px'}}
+            />
+            {/* <AuthInput
               type='text'
               label='Username'
               value={username}
@@ -46,7 +61,7 @@ export const Login = () => {
               label='Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-            />
+            /> */}
             <InputButton
               title='Log In'
               onClick={() => login()}

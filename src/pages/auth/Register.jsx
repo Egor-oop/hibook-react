@@ -35,47 +35,9 @@ export const Register = () => {
   const isLoggedIn = !localStorage.getItem('userToken');
   if (isLoggedIn) {
     return (
-      // <div className='auth__container'>
-      //   <form className='auth__form'>
-      //     <h1 className='auth__header'>Register</h1>
-      //     <div className='auth__form-inputs'>
-      //       <AuthInput
-      //         type='text'
-      //         label='Username'
-      //         value={username}
-      //         onChange={(e) => setUsername(e.target.value)}
-      //       />
-      //       <AuthInput
-      //         type='email'
-      //         label='Email'
-      //         value={email}
-      //         onChange={(e) => setEmail(e.target.value)}
-      //       />
-      //       <AuthInput
-      //         type='password'
-      //         label='Password'
-      //         value={password}
-      //         onChange={(e) => setPassword(e.target.value)}
-      //       />
-      //       <AuthInput
-      //         type='password'
-      //         label='Repeat password'
-      //         value={password2}
-      //         onChange={(e) => setPassword2(e.target.value)}
-      //       />
-      //       <InputButton
-      //         title='Register'
-      //         onClick={() => register()}
-      //       />
-      //     </div>
-      //     <p>
-      //       Already have an account? <Link to='/login'>Log In</Link>
-      //     </p>
-      //   </form>
-      // </div>
       <div className='auth__container'>
         <form className='auth__form'>
-          <h1 className='auth__header'>Log In</h1>
+          <h1 className='auth__header'>Register</h1>
           <div className='auth__form-inputs'>
             <div className='auth__form-data-inputs'>
               <MainInput
@@ -112,7 +74,7 @@ export const Register = () => {
               />
             </div>
             <MainButton
-              title='Log In'
+              title='Register'
               onClick={() => register()}
               style={{ 'max-width': '120px' }}
               wrapperStyle={{ 'text-align': 'center' }}

@@ -24,6 +24,7 @@
 .main-input:disabled {
     border-color: #262626;
     color: #262626;
+    cursor: not-allowed;
 }
 
 .main-input::placeholder {

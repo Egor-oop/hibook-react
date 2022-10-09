@@ -22,4 +22,5 @@
 
 .main-button:disabled {
     background-color: #403E54;
+    cursor: not-allowed;
 }

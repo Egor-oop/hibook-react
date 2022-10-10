@@ -64,18 +64,19 @@ export const MyProfile = () => {
         <div className='profile'>
           <div className='profile__data'>
             <h2 className='profile__username'>{personal[0].username}</h2>
-            <p className='profile__id'>{personal[0].id}</p>
+            <p className='profile__id'>ID: {personal[0].id}</p>
             <p className='profile__fullname'>{personal[0].first_name} {personal[0].last_name}</p>
           </div>
           <div className='profile__image'>
 
           </div>
-          <InputButton
+          {/* <InputButton
             title='Logout'
             onClick={() => logout()}
-          />
+          /> */}
         </div>
         <div className='posts'>
+          <h2>My posts</h2>
           { personalPosts.map(post => (
             <h3>{post.text}</h3>
           )

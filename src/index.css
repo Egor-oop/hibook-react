@@ -14,3 +14,8 @@ body {
 .main-container {
   padding: 100px 300px;
 }
+
+
+h2 {
+  font-size: 32px;
+}

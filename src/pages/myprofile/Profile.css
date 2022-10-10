@@ -1,0 +1,25 @@
+.profile {
+    margin-bottom: 80px;
+}
+
+.profile__data {
+    display: flex;
+    gap: 45px;
+    align-items: baseline;
+}
+
+.profile__id {
+    font-size: 14px;
+}
+
+.profile__fullname {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profile__image {
+    width: 200px;
+    height: 200px;
+    background-color: #8a8a8a;
+    margin-top: 25px;
+}

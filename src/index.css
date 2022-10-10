@@ -10,3 +10,7 @@ body {
   background-color: #181818;
   color: #ffffff;
 }
+
+.main-container {
+  padding: 100px 300px;
+}

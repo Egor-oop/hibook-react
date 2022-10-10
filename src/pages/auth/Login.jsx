@@ -68,6 +68,6 @@ export const Login = () => {
       </div>
     )
   } else {
-    return <Navigate to='/profile' />
+    return <Navigate to='/me' />
   }
 }

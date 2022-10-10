@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { InputButton } from '../../components/button/InputButton';
+import './Profile.css';
 
 export const MyProfile = () => {
   const [personal, setPersonal] = React.useState([{}]);
@@ -59,11 +60,16 @@ export const MyProfile = () => {
   const isLoggedIn = !!localStorage.getItem('userToken');
   if (isLoggedIn) {
     return (
-      <div>
+      <div className='main-container'>
         <div className='profile'>
-          <h2>{personal[0].username}</h2>
-          <small>{personal[0].id}</small>
-          <p>{personal[0].first_name} {personal[0].last_name}</p>
+          <div className='profile__data'>
+            <h2 className='profile__username'>{personal[0].username}</h2>
+            <p className='profile__id'>{personal[0].id}</p>
+            <p className='profile__fullname'>{personal[0].first_name} {personal[0].last_name}</p>
+          </div>
+          <div className='profile__image'>
+
+          </div>
           <InputButton
             title='Logout'
             onClick={() => logout()}

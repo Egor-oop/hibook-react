@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { InputButton } from '../../components/button/InputButton';
 
-export const Profile = () => {
+export const MyProfile = () => {
   const [personal, setPersonal] = React.useState([{}]);
   const [personalPosts, setPersonalPosts] = React.useState([]);
 

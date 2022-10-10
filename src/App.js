@@ -6,7 +6,7 @@ import React from "react";
 import { NotFound } from "./pages/notFound/NotFound";
 import { Register } from "./pages/auth/Register";
 import { Login } from "./pages/auth/Login";
-import { Profile } from "./pages/profile/Profile";
+import { MyProfile } from "./pages/myprofile/MyProfile";
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path='/' element={<div>Hello, World!</div>} />
       <Route path='*' element={<NotFound />} />
-      <Route path='/profile' element={<Profile />} />
+      <Route path='/profile' element={<MyProfile />} />
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
     </Routes>

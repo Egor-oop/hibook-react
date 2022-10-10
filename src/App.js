@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path='/' element={<div>Hello, World!</div>} />
       <Route path='*' element={<NotFound />} />
-      <Route path='/profile' element={<MyProfile />} />
+      <Route path='/me' element={<MyProfile />} />
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
     </Routes>

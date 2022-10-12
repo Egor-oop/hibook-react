@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { InputButton } from '../../components/button/InputButton';
+import { Post } from '../../components/post/Post';
 import './Profile.css';
 
 export const MyProfile = () => {
@@ -57,6 +58,10 @@ export const MyProfile = () => {
     }
   }, [personal])
 
+  // let myDate = new Date(Date.parse('2022-09-17T12:58:24.433068Z'));
+  // let date = myDate.get
+  // console.log(date);
+
   const isLoggedIn = !!localStorage.getItem('userToken');
   if (isLoggedIn) {
     return (
@@ -76,11 +81,17 @@ export const MyProfile = () => {
           /> */}
         </div>
         <div className='posts'>
-          <h2>My posts</h2>
-          { personalPosts.map(post => (
-            <h3>{post.text}</h3>
-          )
-          ) }
+          <h2 style={{'marginBottom': '50px'}}>My posts</h2>
+          <div className="posts__posts">
+            {personalPosts.map(post => (
+              <Post
+                text={post.text}
+                date={post.created_at}
+                author={post.user}
+                key={post.id}
+              />
+            ))}
+          </div>
         </div>
       </div>
     )
